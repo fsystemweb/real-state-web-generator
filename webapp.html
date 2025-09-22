@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Listing Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 min-h-screen p-6">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-2xl font-semibold mb-4">Real Estate Listing Generator</h1>
+
+        <!-- Input Card -->
+        <div class="bg-white shadow rounded-2xl p-4 mb-6">
+            <label for="jsonInput" class="block text-sm font-medium">Property JSON Input</label>
+            <textarea id="jsonInput" class="w-full mt-2 p-2 border rounded h-64 font-mono text-sm">{
+  "title": "T3 apartment in Lisbon",
+  "location": {"city": "Lisbon", "neighborhood": "Campo de Ourique"},
+  "features": {"bedrooms": 3, "bathrooms": 2, "area_sqm": 120, "balcony": true, "parking": false, "elevator": true, "floor": 2, "year_built": 2005},
+  "price": 650000,
+  "listing_type": "sale",
+  "language": "en"
+}</textarea>
+
+            <div class="flex items-center gap-3 mt-6">
+                <button id="generateBtn" class="px-4 py-2 bg-slate-900 text-white rounded-lg shadow hover:bg-slate-700">
+                    Generate Listing
+                </button>
+                <button id="clearBtn"
+                    class="px-4 py-2 bg-slate-100 text-slate-800 rounded-lg shadow hover:bg-slate-200">
+                    Clear
+                </button>
+            </div>
+
+            <p id="error" class="text-red-600 mt-4 hidden"></p>
+        </div>
+
+        <!-- Output Grid -->
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- HTML Output -->
+            <div class="bg-white shadow rounded-2xl p-4">
+                <h2 class="font-semibold mb-2">Generated HTML</h2>
+                <div id="loading" class="hidden py-6 text-center">⏳ Generating...</div>
+                <div id="htmlOutput" class="prose max-w-none mb-4"></div>
+                <label class="block text-sm font-medium">Raw HTML</label>
+                <textarea id="htmlRaw" class="w-full mt-2 p-2 border rounded h-48 text-sm" readonly></textarea>
+            </div>
+
+            <!-- Evaluation -->
+            <div class="bg-white shadow rounded-2xl p-4">
+                <h2 class="font-semibold mb-2">Evaluation</h2>
+                <div id="evaluation" class="text-sm text-slate-600">No evaluation yet.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const generateBtn = document.getElementById("generateBtn");
+        const clearBtn = document.getElementById("clearBtn");
+        const jsonInput = document.getElementById("jsonInput");
+        const errorEl = document.getElementById("error");
+        const htmlOutput = document.getElementById("htmlOutput");
+        const htmlRaw = document.getElementById("htmlRaw");
+        const evaluationEl = document.getElementById("evaluation");
+        const loadingEl = document.getElementById("loading");
+
+        async function generateListing() {
+            errorEl.classList.add("hidden");
+            errorEl.textContent = "";
+            htmlOutput.innerHTML = "";
+            htmlRaw.value = "";
+            evaluationEl.textContent = "No evaluation yet.";
+            loadingEl.classList.remove("hidden");
+
+            try {
+                const payload = JSON.parse(jsonInput.value);
+
+                const res = await fetch("/generate-listing", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload),
+                });
+
+                if (!res.ok) {
+                    throw new Error(await res.text());
+                }
+
+                const data = await res.json();
+                htmlOutput.innerHTML = data.html || "";
+                htmlRaw.value = data.html || "";
+                evaluationEl.innerHTML = `
+          <div>Structure compliance: <strong>${data.evaluation?.structure_compliance ?? "-"}</strong></div>
+          <div>Language & SEO: <strong>${data.evaluation?.language_fluency_seo ?? "-"}</strong></div>
+          <div>Multilingual adaptability: <strong>${data.evaluation?.multilingual_adaptability ?? "-"}</strong></div>
+          <div class="mt-2">Total score: <strong>${data.evaluation?.total_score ?? "-"}</strong></div>
+        `;
+            } catch (err) {
+                errorEl.textContent = err.message || "Invalid input or request failed";
+                errorEl.classList.remove("hidden");
+            } finally {
+                loadingEl.classList.add("hidden");
+            }
+        }
+
+        function clearAll() {
+            htmlOutput.innerHTML = "";
+            htmlRaw.value = "";
+            evaluationEl.textContent = "No evaluation yet.";
+            errorEl.textContent = "";
+            errorEl.classList.add("hidden");
+        }
+
+        generateBtn.addEventListener("click", generateListing);
+        clearBtn.addEventListener("click", clearAll);
+    </script>
+</body>
+
+</html>
