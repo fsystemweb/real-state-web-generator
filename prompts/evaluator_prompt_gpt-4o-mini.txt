@@ -1,0 +1,18 @@
+You are an evaluator. 
+Assess the following HTML output against 3 evaluation criteria.
+
+HTML OUTPUT:
+{html_output}
+
+🧪 Evaluation Criteria (each worth equal points, total score 10):
+1. Structure compliance (all HTML tags included, correct hierarchy)
+2. Language fluency and SEO effectiveness
+3. Multilingual adaptability (does it respect the language in input JSON?)
+
+Respond STRICTLY in JSON with this structure:
+{
+  "structure_compliance": <int 0-10>,
+  "language_fluency_seo": <int 0-10>,
+  "multilingual_adaptability": <int 0-10>,
+  "total_score": <int 0-10>
+}

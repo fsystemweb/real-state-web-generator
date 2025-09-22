@@ -1,2 +1,77 @@
 # real-state-web-generator
-A tool that automatically generates real estate websites using Prompt Engineering and FastAPI. The system leverages large language models (LLMs) to create tailored website content (property descriptions, landing pages, SEO text, etc.), and serves it through a modern API.
+This project provides a REST API that transforms structured property data (JSON) into SEO-optimized, multilingual HTML listings for real estate websites.
+It uses FastAPI, LangChain, and OpenAI for generation and evaluation.
+
+## Features
+- ✅ Generates structured HTML (title, meta description, description, features, neighborhood, CTA)
+- 🌍 Multilingual support: English 🇬🇧 and Portuguese  🇵🇹
+- 🔍 SEO keyword enrichment
+- 🧪 Automatic evaluation of output:
+    - Structure compliance
+    - Language fluency & SEO
+    - Multilingual adaptability
+
+- 🔁 Retry mechanism: Up to 3 attempts if evaluation score < 8/10
+- 📦 Modular design: Prompts stored separately for easier editing
+
+## Installation
+ - ```bash git clone https://github.com/fsystemweb/real-state-web-generator.git ```
+ - ```bash cd real-state-web-generator ```
+ - ```bash pip install -r requirements.txt ```
+ - OPENAI_API_KEY=your_openai_api_key_here
+
+## Running the API
+ - ```bash uvicorn app.main:app --reload ```
+
+## Usage
+Example Request:
+- POST /generate-listing
+```json
+{
+  "title": "T3 apartment in Lisbon",
+  "location": {
+    "city": "Lisbon",
+    "neighborhood": "Campo de Ourique"
+  },
+  "features": {
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area_sqm": 120,
+    "balcony": true,
+    "parking": false,
+    "elevator": true,
+    "floor": 2,
+    "year_built": 2005
+  },
+  "price": 650000,
+  "listing_type": "sale",
+  "language": "en"
+}
+```
+
+Example response: 
+```json
+{
+  "html": "<title>...</title>\n<meta ... > ...",
+  "evaluation": {
+    "structure_compliance": 9,
+    "language_fluency_seo": 8,
+    "multilingual_adaptability": 9,
+    "total_score": 9
+  },
+  "retries": 0,
+  "failed_criteria_log": []
+}
+```
+
+## Evaluation Criteria
+Each generated listing is automatically evaluated against:
+
+- ✅ Structure compliance (HTML tags + hierarchy)
+- 📣 Language fluency & SEO effectiveness
+- 🌍 Multilingual adaptability
+
+Each criterion is scored 1–10. The total score must be ≥ 8 to be accepted.
+
+## License
+MIT License – free to use and modify.
