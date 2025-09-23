@@ -1,19 +1,20 @@
-# Load environment variables from .env
+import logging
 from dotenv import load_dotenv
 import os
 load_dotenv()
+import json
 
-# Standard library
 from pathlib import Path
-
-# FastAPI / Pydantic
 from fastapi import HTTPException
 from app.models import PropertyData
-
-# LangChain (updated)
 from langchain_openai import ChatOpenAI
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
+
+# Setup logging
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
+
 
 # Ensure your OpenAI API key is set
 openai_api_key = os.getenv("OPENAI_API_KEY")
@@ -22,7 +23,7 @@ if not openai_api_key:
 
 # Load prompt templates from files
 PROMPT_DIR = Path(__file__).resolve().parent / "prompts"
-generator_template = (PROMPT_DIR / "evaluator_prompt_gpt-4o-mini.txt").read_text()
+generator_template = (PROMPT_DIR / "generator_prompt_gpt-4o-mini.txt").read_text()
 evaluator_template = (PROMPT_DIR / "evaluator_prompt_gpt-4o-mini.txt").read_text()
 
 generator_prompt = PromptTemplate(input_variables=["property_json"], template=generator_template)
@@ -40,30 +41,29 @@ MAX_RETRIES = 3
 MIN_SCORE = 3
 
 def generate_and_evaluate(property_data: PropertyData):
+    logger.info("Request: %s", property_data)
     retries = 0
     failed_criteria_log = []
 
     while retries < MAX_RETRIES:
-        html_output = generator_chain.run(property_json=property_data.model_dump_json())
-        evaluation_json = evaluator_chain.run(html_output=html_output)
+        html_output = generator_chain.invoke({"property_json": property_data.model_dump_json()})["text"]
+        logger.info("HTML Output: %s", html_output)
+        evaluation_json = evaluator_chain.invoke({"html_output": html_output})
+        logger.info("Evaluation JSON: %s", evaluation_json)
 
-        try:
-            evaluation = eval(evaluation_json)  # Convert JSON string to dict
-        except Exception:
-            raise HTTPException(status_code=500, detail="Evaluator returned invalid JSON")
-
-        total_score = evaluation.get("total_score", 0)
+        total_score = evaluation_json.get("total_score", 0)
 
         if total_score >= MIN_SCORE:
             return {
                 "html": html_output,
-                "evaluation": evaluation,
+                "evaluation": evaluation_json,
                 "retries": retries,
                 "failed_criteria_log": failed_criteria_log
             }
 
         failing_criteria = {
-            k: v for k, v in evaluation.items() if k != "total_score" and v < MIN_SCORE
+            k: int(v) for k, v in evaluation_json.items()
+            if k != "total_score" and int(v) < MIN_SCORE
         }
         failed_criteria_log.append({"retry": retries + 1, "failing_criteria": failing_criteria})
         retries += 1

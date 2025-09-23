@@ -15,14 +15,28 @@
         <!-- Input Card -->
         <div class="bg-white shadow rounded-2xl p-4 mb-6">
             <label for="jsonInput" class="block text-sm font-medium">Property JSON Input</label>
-            <textarea id="jsonInput" class="w-full mt-2 p-2 border rounded h-64 font-mono text-sm">{
-  "title": "T3 apartment in Lisbon",
-  "location": {"city": "Lisbon", "neighborhood": "Campo de Ourique"},
-  "features": {"bedrooms": 3, "bathrooms": 2, "area_sqm": 120, "balcony": true, "parking": false, "elevator": true, "floor": 2, "year_built": 2005},
-  "price": 650000,
-  "listing_type": "sale",
-  "language": "en"
-}</textarea>
+            <textarea id="jsonInput" class="w-full mt-2 p-2 border rounded h-64 font-mono text-sm">
+{
+    "title": "T3 apartment in Lisbon",
+    "location": {
+    "city": "Lisbon",
+    "neighborhood": "Campo de Ourique"
+    },
+    "features": {
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area_sqm": 120,
+    "balcony": true,
+    "parking": false,
+    "elevator": true,
+    "floor": 2,
+    "year_built": 2005
+    },
+    "price": 650000,
+    "listing_type": "sale",
+    "language": "en"
+}
+            </textarea>
 
             <div class="flex items-center gap-3 mt-6">
                 <button id="generateBtn" class="px-4 py-2 bg-slate-900 text-white rounded-lg shadow hover:bg-slate-700">

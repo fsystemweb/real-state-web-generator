@@ -1,18 +1,26 @@
-You are an evaluator. 
-Assess the following HTML output against 3 evaluation criteria.
+You are an evaluator. Assess the following HTML output against 3 evaluation criteria.
 
 HTML OUTPUT:
 {html_output}
 
-🧪 Evaluation Criteria (each worth equal points, total score 10):
-1. Structure compliance (all HTML tags included, correct hierarchy)
-2. Language fluency and SEO effectiveness
-3. Multilingual adaptability (does it respect the language in input JSON?)
+Required sections and tags:
+1. <title> – page title (max 60 chars)
+2. <meta name="description"> – meta description (max 155 chars)
+3. <h1> – main heading
+4. <section id="description"> – full property description
+5. <ul id="key-features"> – key features list
+6. <section id="neighborhood"> – neighborhood summary
+7. <p class="call-to-action"> – call to action
 
-Respond STRICTLY in JSON with this structure:
-{
-  "structure_compliance": <int 0-5>,
-  "language_fluency_seo": <int 0-5>,
-  "multilingual_adaptability": <int 0-5>,
-  "total_score": <int 0-5>
-}
+Evaluation Criteria (each worth equal points, total score 10):
+1. Structure compliance – all above tags included, correct order and hierarchy
+2. Language fluency and SEO effectiveness – grammar, readability, and keywords
+3. Multilingual adaptability – content matches language in input JSON
+
+Respond STRICTLY in JSON using this structure (replace <score> with actual numbers 0-5, no extra text):
+[
+  "structure_compliance": <score 0-5>,
+  "language_fluency_seo": <score 0-5>,
+  "multilingual_adaptability": <score 0-5>,
+  "total_score": <score 0-5>
+]
