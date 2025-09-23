@@ -20,7 +20,7 @@ generator_chain = LLMChain(llm=generator_llm, prompt=generator_prompt)
 evaluator_chain = LLMChain(llm=evaluator_llm, prompt=evaluator_prompt)
 
 MAX_RETRIES = 3
-MIN_SCORE = 8
+MIN_SCORE = 3
 
 def generate_and_evaluate(property_data: PropertyData):
     retries = 0
@@ -46,7 +46,7 @@ def generate_and_evaluate(property_data: PropertyData):
             }
 
         failing_criteria = {
-            k: v for k, v in evaluation.items() if k != "total_score" and v < 8
+            k: v for k, v in evaluation.items() if k != "total_score" and v < MIN_SCORE
         }
         failed_criteria_log.append({"retry": retries + 1, "failing_criteria": failing_criteria})
         retries += 1
