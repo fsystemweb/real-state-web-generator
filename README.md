@@ -17,8 +17,20 @@ It uses FastAPI, LangChain, and OpenAI for generation and evaluation.
 ## Installation
  - ```bash git clone https://github.com/fsystemweb/real-state-web-generator.git ```
  - ```bash cd real-state-web-generator ```
- - ```bash pip install -r requirements.txt ```
- - OPENAI_API_KEY=your_openai_api_key_here
+
+### Create virtual environment
+ 1. Create a virtual environment called "venv"
+  - ```bash python3 -m venv venv ```
+ 2. Activate it
+  * On Linux / macOS:
+    - ```bash source venv/bin/activate ```
+  * On Windows (PowerShell):
+    - ```bash .\venv\Scripts\Activate.ps1 ```
+ 3. Install dependecies:
+    - ```bash pip install -r requirements.txt ```
+
+* Set environement variable
+  - OPENAI_API_KEY=your_openai_api_key_here
 
 ## Running the API
  - ```bash uvicorn app.main:app --reload ```
