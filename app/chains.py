@@ -1,21 +1,38 @@
+# Load environment variables from .env
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+# Standard library
 from pathlib import Path
-from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
-from langchain_openai import ChatOpenAI
-from app.models import PropertyData
+
+# FastAPI / Pydantic
 from fastapi import HTTPException
+from app.models import PropertyData
+
+# LangChain (updated)
+from langchain_openai import ChatOpenAI
+from langchain.chains import LLMChain
+from langchain.prompts import PromptTemplate
+
+# Ensure your OpenAI API key is set
+openai_api_key = os.getenv("OPENAI_API_KEY")
+if not openai_api_key:
+    raise EnvironmentError("OPENAI_API_KEY not found in environment")
 
 # Load prompt templates from files
 PROMPT_DIR = Path(__file__).resolve().parent / "prompts"
-generator_template = (PROMPT_DIR / "generator_prompt.txt").read_text()
-evaluator_template = (PROMPT_DIR / "evaluator_prompt.txt").read_text()
+generator_template = (PROMPT_DIR / "evaluator_prompt_gpt-4o-mini.txt").read_text()
+evaluator_template = (PROMPT_DIR / "evaluator_prompt_gpt-4o-mini.txt").read_text()
 
 generator_prompt = PromptTemplate(input_variables=["property_json"], template=generator_template)
 evaluator_prompt = PromptTemplate(input_variables=["html_output"], template=evaluator_template)
 
-generator_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.7)
-evaluator_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+# Initialize ChatOpenAI with API key
+generator_llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.7, openai_api_key=openai_api_key)
+evaluator_llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0, openai_api_key=openai_api_key)
 
+# Setup chains
 generator_chain = LLMChain(llm=generator_llm, prompt=generator_prompt)
 evaluator_chain = LLMChain(llm=evaluator_llm, prompt=evaluator_prompt)
 

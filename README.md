@@ -20,7 +20,7 @@ It uses FastAPI, LangChain, and OpenAI for generation and evaluation.
 
 ### Create virtual environment
  1. Create a virtual environment called "venv"
-  - ```bash python3 -m venv venv ```
+  - ```bash python3.12 -m venv venv ```
  2. Activate it
   * On Linux / macOS:
     - ```bash source venv/bin/activate ```
@@ -33,7 +33,7 @@ It uses FastAPI, LangChain, and OpenAI for generation and evaluation.
   - OPENAI_API_KEY=your_openai_api_key_here
 
 ## Running the API
- - ```bash uvicorn app.main:app --reload ```
+ - ```bash python -m app.main ```
 
 ## Usage
 Example Request:
@@ -75,6 +75,15 @@ Example response:
   "failed_criteria_log": []
 }
 ```
+
+## Run app
+ 1. Start API
+  - ```bash python -m app.main ```
+ 2. Start Webapp
+  - ```bash python -m http.server 5500```
+ 3. Open browser on this url:
+    - ```json http://localhost:5500/webapp.html ```
+
 
 ## Evaluation Criteria
 Each generated listing is automatically evaluated against:
