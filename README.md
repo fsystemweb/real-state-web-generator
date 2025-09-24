@@ -4,7 +4,7 @@ It uses FastAPI, LangChain, and OpenAI for generation and evaluation.
 
 ## Features
 - ✅ Generates structured HTML (title, meta description, description, features, neighborhood, CTA)
-- 🌍 Multilingual support: English 🇬🇧 and Portuguese  🇵🇹
+- 🌍 Multilingual support: English 🇬🇧 and Portuguese  🇵🇹 and Spanish 🇪🇸
 - 🔍 SEO keyword enrichment
 - 🧪 Automatic evaluation of output:
     - Structure compliance
