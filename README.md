@@ -11,7 +11,7 @@ It uses FastAPI, LangChain, and OpenAI for generation and evaluation.
     - Language fluency & SEO
     - Multilingual adaptability
 
-- 🔁 Retry mechanism: Up to 3 attempts if evaluation score < 8/10
+- 🔁 Retry mechanism: Up to 3 attempts if evaluation score < 3/5
 - 📦 Modular design: Prompts stored separately for easier editing
 
 ## Installation
@@ -66,10 +66,10 @@ Example response:
 {
   "html": "<title>...</title>\n<meta ... > ...",
   "evaluation": {
-    "structure_compliance": 9,
-    "language_fluency_seo": 8,
-    "multilingual_adaptability": 9,
-    "total_score": 9
+    "structure_compliance": 5,
+    "language_fluency_seo": 4,
+    "multilingual_adaptability": 4,
+    "total_score": 4
   },
   "retries": 0,
   "failed_criteria_log": []
@@ -92,7 +92,7 @@ Each generated listing is automatically evaluated against:
 - 📣 Language fluency & SEO effectiveness
 - 🌍 Multilingual adaptability
 
-Each criterion is scored 1–10. The total score must be ≥ 8 to be accepted.
+Each criterion is scored 0–5. The total score must be ≥ 3 to be accepted.
 
 ## License
 MIT License – free to use and modify.

@@ -3,7 +3,7 @@ You are an evaluator. Assess the following HTML output against the required sect
 HTML OUTPUT:
 {html_output}
 
---- EXAMPLE INPUT ---
+--- GOOD EXAMPLE INPUT ---
 <title>T3 Apartment for Sale in Campo de Ourique, Lisbon</title>
 
 <meta name="description" content="Spacious T3 apartment for sale in Lisbon with balcony and elevator access, located in the heart of Campo de Ourique. Ideal for families.">
@@ -32,13 +32,29 @@ HTML OUTPUT:
 
 <p class="call-to-action">Don't miss this opportunity—schedule your visit today and make this Lisbon apartment your new home.</p>
 
---- EXAMPLE OUTPUT ---
-{{
+--- GOOD EXAMPLE OUTPUT ---
+{
   "structure_compliance": 5,
   "language_fluency_seo": 5,
   "multilingual_adaptability": 5,
-  "total_score": 5
-}}
+  "total_score": 5,
+  "missing_or_invalid_tags": []
+}
+
+--- BAD EXAMPLE INPUT ---
+<title>T3 Apartment Lisbon</title>
+<meta name="description" content="A great place.">
+<h1>Apartment</h1>
+
+--- BAD EXAMPLE OUTPUT ---
+{
+  "structure_compliance": 0,
+  "language_fluency_seo": 2,
+  "multilingual_adaptability": 3,
+  "total_score": 1,
+  "missing_or_invalid_tags": ["meta description too short", "h1 too generic", "missing key-features section"]
+}
+
 --- REQUIRED SECTIONS AND TAGS ---
 The HTML must include these elements:
 1. <title> – page title (max 60 chars)
