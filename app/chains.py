@@ -24,14 +24,14 @@ if not openai_api_key:
 # Load prompt templates from files
 PROMPT_DIR = Path(__file__).resolve().parent / "prompts"
 generator_template = (PROMPT_DIR / "generator_prompt_gpt-4o-mini.txt").read_text()
-evaluator_template = (PROMPT_DIR / "evaluator_prompt_gpt-4o-mini.txt").read_text()
+evaluator_template = (PROMPT_DIR / "evaluator_prompt_gpt-4-turbo.txt").read_text()
 
 generator_prompt = PromptTemplate(input_variables=["property_json"], template=generator_template)
 evaluator_prompt = PromptTemplate(input_variables=["html_output"], template=evaluator_template)
 
 # Initialize ChatOpenAI with API key
 generator_llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.7, openai_api_key=openai_api_key)
-evaluator_llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0, openai_api_key=openai_api_key)
+evaluator_llm = ChatOpenAI(model_name="gpt-4-turbo", temperature=0, openai_api_key=openai_api_key)
 
 # Setup chains
 generator_chain = LLMChain(llm=generator_llm, prompt=generator_prompt)

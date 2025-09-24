@@ -1,0 +1,81 @@
+You are an evaluator. Assess the following HTML output against the required sections and 3 evaluation criteria.  
+
+HTML OUTPUT:
+{html_output}
+
+--- EXAMPLE INPUT ---
+<title>T3 Apartment for Sale in Campo de Ourique, Lisbon</title>
+
+<meta name="description" content="Spacious T3 apartment for sale in Lisbon with balcony and elevator access, located in the heart of Campo de Ourique. Ideal for families.">
+
+<h1>Modern 3-Bedroom Apartment in Campo de Ourique, Lisbon</h1>
+
+<section id="description">
+  <p>
+    Nestled in the vibrant neighborhood of Campo de Ourique, this stylish T3 apartment offers 120 sqm of bright and spacious living. Located on the second floor of a well-maintained building with elevator access, the property features three generously sized bedrooms, two modern bathrooms, and a private balcony perfect for enjoying Lisbon’s sunny days. Built in 2005, this apartment blends modern design with everyday comfort. With a sale price of €650,000, it presents an excellent opportunity for families or professionals seeking a central Lisbon lifestyle.
+  </p>
+</section>
+
+<ul id="key-features">
+  <li>120 sqm of living space</li>
+  <li>3 bedrooms and 2 bathrooms</li>
+  <li>Private balcony</li>
+  <li>Elevator access</li>
+  <li>Located in Campo de Ourique, Lisbon</li>
+</ul>
+
+<section id="neighborhood">
+  <p>
+    Campo de Ourique is one of Lisbon’s most sought-after neighborhoods, known for its traditional charm, trendy cafés, and excellent schools. With green parks, local markets, and easy access to public transportation, it offers a perfect blend of comfort and convenience in the heart of the city.
+  </p>
+</section>
+
+<p class="call-to-action">Don't miss this opportunity—schedule your visit today and make this Lisbon apartment your new home.</p>
+
+--- EXAMPLE OUTPUT ---
+[
+  "structure_compliance": 5,
+  "language_fluency_seo": 5,
+  "multilingual_adaptability": 5,
+  "total_score": 5
+]
+--- REQUIRED SECTIONS AND TAGS ---
+The HTML must include these elements:
+1. <title> – page title (max 60 chars)
+2. <meta name="description"> – meta description (max 155 chars)
+3. <h1> – main heading
+4. <section id="description"> – full property description
+5. <ul id="key-features"> – key features list
+6. <section id="neighborhood"> – neighborhood summary
+7. <p class="call-to-action"> – call to action
+
+--- EVALUATION CRITERIA (0–5 points each) ---
+1. structure_compliance: 
+   - 5 = all required tags present, valid, and in correct order  
+   - 4 = 1 issue (e.g., title too long, wrong order, or one missing tag)  
+   - 3 = 2–3 missing/invalid required tags  
+   - 2 = 4+ missing/invalid required tags  
+   - 1 = only 1 tag valid  
+   - 0 = no required tags present  
+
+2. language_fluency_seo: 
+   Grammar, readability, keyword usage, and SEO effectiveness.
+
+3. multilingual_adaptability: 
+   Content should match the language of the property JSON input.
+
+--- SCORING ---
+- Each criterion is scored 0–5.  
+- total_score = average of the three criteria, rounded down to nearest integer.
+
+--- OUTPUT FORMAT ---
+Respond STRICTLY in JSON using this exact structure.  
+Do not include HTML, explanations, code fences, or any extra text.  
+
+[
+  "structure_compliance": <0-5>,
+  "language_fluency_seo": <0-5>,
+  "multilingual_adaptability": <0-5>,
+  "total_score": <0-5>,
+  "missing_or_invalid_tags": [<list of problems or empty>]
+]
