@@ -4,7 +4,7 @@ It uses FastAPI, LangChain, and OpenAI for generation and evaluation.
 
 ## Features
 - ✅ Generates structured HTML (title, meta description, description, features, neighborhood, CTA)
-- 🌍 Multilingual support: English 🇬🇧 and Portuguese  🇵🇹 and Spanish 🇪🇸
+- 🌍 Multilingual support: English 🇬🇧 and Portuguese 🇵🇹 and Spanish 🇪🇸
 - 🔍 SEO keyword enrichment
 - 🧪 Automatic evaluation of output:
     - Structure compliance
@@ -13,6 +13,10 @@ It uses FastAPI, LangChain, and OpenAI for generation and evaluation.
 
 - 🔁 Retry mechanism: Up to 3 attempts if evaluation score < 3/5
 - 📦 Modular design: Prompts stored separately for easier editing
+
+## Solution
+
+![alt text](image.png)
 
 ## Installation
  - ```bash git clone https://github.com/fsystemweb/real-state-web-generator.git ```
