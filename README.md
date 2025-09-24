@@ -4,7 +4,7 @@ It uses FastAPI, LangChain, and OpenAI for generation and evaluation.
 
 ## Features
 - ✅ Generates structured HTML (title, meta description, description, features, neighborhood, CTA)
-- 🌍 Multilingual support: English 🇬🇧 and Portuguese 🇵🇹 and Spanish 🇪🇸
+- 🌍 Multilingual support: English 🇬🇧, Portuguese 🇵🇹 and Spanish 🇪🇸
 - 🔍 SEO keyword enrichment
 - 🧪 Automatic evaluation of output:
     - Structure compliance
@@ -19,25 +19,25 @@ It uses FastAPI, LangChain, and OpenAI for generation and evaluation.
 ![alt text](image.png)
 
 ## Installation
- - ```bash git clone https://github.com/fsystemweb/real-state-web-generator.git ```
- - ```bash cd real-state-web-generator ```
+ - ``` git clone https://github.com/fsystemweb/real-state-web-generator.git ```
+ - ``` cd real-state-web-generator ```
 
 ### Create virtual environment
  1. Create a virtual environment called "venv"
-  - ```bash python3.12 -m venv venv ```
+  - ``` python3.12 -m venv venv ```
  2. Activate it
   * On Linux / macOS:
-    - ```bash source venv/bin/activate ```
+    - ``` source venv/bin/activate ```
   * On Windows (PowerShell):
-    - ```bash .\venv\Scripts\Activate.ps1 ```
+    - ``` .\venv\Scripts\Activate.ps1 ```
  3. Install dependecies:
-    - ```bash pip install -r requirements.txt ```
+    - ``` pip install -r requirements.txt ```
 
 * Set environement variable
   - OPENAI_API_KEY=your_openai_api_key_here
 
 ## Running the API
- - ```bash python -m app.main ```
+ - ``` python -m app.main ```
 
 ## Usage
 Example Request:
@@ -82,11 +82,11 @@ Example response:
 
 ## Run app
  1. Start API
-  - ```bash python -m app.main ```
+  - ``` python -m app.main ```
  2. Start Webapp
-  - ```bash python -m http.server 5500```
+  - ``` python -m http.server 5500```
  3. Open browser on this url:
-    - ```json http://localhost:5500/webapp.html ```
+    - ``` http://localhost:5500/webapp.html ```
 
 
 ## Evaluation Criteria
