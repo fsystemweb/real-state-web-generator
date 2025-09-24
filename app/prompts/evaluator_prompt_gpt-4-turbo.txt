@@ -33,12 +33,12 @@ HTML OUTPUT:
 <p class="call-to-action">Don't miss this opportunity—schedule your visit today and make this Lisbon apartment your new home.</p>
 
 --- EXAMPLE OUTPUT ---
-[
+{{
   "structure_compliance": 5,
   "language_fluency_seo": 5,
   "multilingual_adaptability": 5,
   "total_score": 5
-]
+}}
 --- REQUIRED SECTIONS AND TAGS ---
 The HTML must include these elements:
 1. <title> – page title (max 60 chars)
@@ -72,10 +72,10 @@ The HTML must include these elements:
 Respond STRICTLY in JSON using this exact structure.  
 Do not include HTML, explanations, code fences, or any extra text.  
 
-[
+{{
   "structure_compliance": <0-5>,
   "language_fluency_seo": <0-5>,
   "multilingual_adaptability": <0-5>,
   "total_score": <0-5>,
   "missing_or_invalid_tags": [<list of problems or empty>]
-]
+}}

@@ -2,6 +2,7 @@ import logging
 from dotenv import load_dotenv
 import os
 load_dotenv()
+import re
 import json
 
 from pathlib import Path
@@ -48,7 +49,14 @@ def generate_and_evaluate(property_data: PropertyData):
     while retries < MAX_RETRIES:
         html_output = generator_chain.invoke({"property_json": property_data.model_dump_json()})["text"]
         logger.info("HTML Output: %s", html_output)
-        evaluation_json = evaluator_chain.invoke({"html_output": html_output})
+        raw_output = evaluator_chain.invoke({"html_output": html_output})
+        evaluation_str = raw_output["text"]
+        evaluation_str = re.sub(r"^```.*\n|```$", "", evaluation_str.strip(), flags=re.MULTILINE)
+        try:
+            evaluation_json = json.loads(evaluation_str)
+        except json.JSONDecodeError:
+            logger.error("Invalid evaluator JSON: %s", evaluation_str)
+            raise HTTPException(status_code=500, detail="Evaluator returned invalid JSON")
         logger.info("Evaluation JSON: %s", evaluation_json)
 
         total_score = evaluation_json.get("total_score", 0)
