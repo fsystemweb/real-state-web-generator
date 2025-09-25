@@ -125,6 +125,15 @@
           <div>Language & SEO: <strong>${data.evaluation?.language_fluency_seo ?? "-"}</strong></div>
           <div>Multilingual adaptability: <strong>${data.evaluation?.multilingual_adaptability ?? "-"}</strong></div>
           <div class="mt-2">Total score: <strong>${data.evaluation?.total_score ?? "-"}</strong></div>
+          <div class="mt-2">Retries: <strong>${data.evaluation?.retries ?? "-"}</strong></div>
+            <div class="mt-2">
+            Missing or invalid tags:
+            <ul>
+                ${data.missing_or_invalid_tags?.length
+                ? data.missing_or_invalid_tags.map(tag => `<li>${tag}</li>`).join("")
+                : "<li>-</li>"}
+            </ul>
+            </div>
         `;
             } catch (err) {
                 errorEl.textContent = err.message || "Invalid input or request failed";

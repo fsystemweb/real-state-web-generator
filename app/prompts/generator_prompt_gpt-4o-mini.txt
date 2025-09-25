@@ -48,7 +48,7 @@ Rules:
 1. Maintain 7 sections in the exact order.
 2. Title ≤ 60 chars. Meta ≤ 155 chars. 
 3. Description 500–700 chars. Features 3–5 bullets.
-4. Use the "language" field for English (en), Portuguese (pt) or Spanish (es).
+4. Write content in {language_name} ({language_code}).
 5. Include keywords naturally (location, property type, listing intent).
 6. Skip missing fields gracefully without inventing details.
 7. Return ONLY the HTML content, no extra text.

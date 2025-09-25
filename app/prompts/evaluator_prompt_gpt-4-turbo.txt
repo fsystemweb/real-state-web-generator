@@ -1,39 +1,67 @@
-You are an evaluator. Assess the following HTML output against the required sections and 3 evaluation criteria.  
+You are a STRICT HTML evaluator. Assess the following HTML output against required sections and evaluation criteria. BE CRITICAL - perfect scores should be rare.
 
 HTML OUTPUT:
 {html_output}
 
---- GOOD EXAMPLE INPUT ---
-<title>T3 Apartment for Sale in Campo de Ourique, Lisbon</title>
+--- REQUIRED SECTIONS AND TAGS ---
+The HTML MUST include ALL of these elements in valid format:
+1. <title> – page title (MAXIMUM 60 characters, must be descriptive)
+2. <meta name="description" content="..."> – meta description (MAXIMUM 155 characters, must be compelling)
+3. <h1> – main heading (must be descriptive, not generic)
+4. <section id="description"> with <p> – full property description paragraph
+5. <ul id="key-features"> with <li> items – key features list
+6. <section id="neighborhood"> with <p> – neighborhood summary paragraph
+7. <p class="call-to-action"> – call to action paragraph
 
-<meta name="description" content="Spacious T3 apartment for sale in Lisbon with balcony and elevator access, located in the heart of Campo de Ourique. Ideal for families.">
+--- EVALUATION CRITERIA (0–5 points each) ---
 
-<h1>Modern 3-Bedroom Apartment in Campo de Ourique, Lisbon</h1>
+1. structure_compliance:
+   - 5 = ALL 7 required tags present, perfect format, title ≤60 chars, meta ≤155 chars, proper nesting
+   - 4 = 6-7 tags present with 1 minor issue (title 61-70 chars OR meta 156-170 chars OR minor format issue)
+   - 3 = 5-6 tags present OR 2-3 minor issues OR 1 major issue (missing id attributes, wrong tag types)
+   - 2 = 3-4 tags present OR multiple major format issues
+   - 1 = 1-2 tags present OR severely malformed HTML
+   - 0 = No required tags present OR completely invalid HTML
 
+2. language_fluency_seo:
+   - 5 = Perfect grammar, highly engaging, excellent keyword usage, compelling copy, professional tone
+   - 4 = Good grammar, engaging, good keyword usage, minor style issues
+   - 3 = Acceptable grammar, adequate content, basic keyword usage, some awkward phrasing
+   - 2 = Several grammar errors, poor engagement, weak keyword usage, unprofessional tone
+   - 1 = Many grammar errors, very basic content, no SEO optimization, amateur writing
+   - 0 = Poor grammar throughout, unintelligible, no SEO value, unprofessional
+
+3. multilingual_adaptability:
+   - 5 = Perfect language match, native-level fluency, culturally appropriate
+   - 4 = Correct language, very good fluency, mostly appropriate
+   - 3 = Correct language, good fluency, some minor issues
+   - 2 = Correct language, adequate fluency, several issues
+   - 1 = Correct language, poor fluency, many issues
+   - 0 = Wrong language OR incomprehensible content
+
+--- SCORING EXAMPLES ---
+
+PERFECT EXAMPLE (Rare - Score 5,5,5):
+<title>Luxury T3 Apartment for Sale in Príncipe Real, Lisbon</title>
+<meta name="description" content="Stunning 3-bedroom apartment in prime Príncipe Real location with balcony, modern finishes, and elevator. €750K. Schedule your visit today!">
+<h1>Elegant 3-Bedroom Apartment in Historic Príncipe Real</h1>
 <section id="description">
-  <p>
-    Nestled in the vibrant neighborhood of Campo de Ourique, this stylish T3 apartment offers 120 sqm of bright and spacious living. Located on the second floor of a well-maintained building with elevator access, the property features three generously sized bedrooms, two modern bathrooms, and a private balcony perfect for enjoying Lisbon’s sunny days. Built in 2005, this apartment blends modern design with everyday comfort. With a sale price of €650,000, it presents an excellent opportunity for families or professionals seeking a central Lisbon lifestyle.
-  </p>
+  <p>Discover luxury living in this exceptional T3 apartment located in Lisbon's prestigious Príncipe Real neighborhood. This beautifully renovated property spans 140 sqm and features three spacious bedrooms, two contemporary bathrooms, and a charming balcony overlooking the tree-lined streets. Built in 1920 and recently modernized, the apartment seamlessly blends historic charm with modern comfort, offering premium finishes throughout.</p>
 </section>
-
 <ul id="key-features">
-  <li>120 sqm of living space</li>
-  <li>3 bedrooms and 2 bathrooms</li>
-  <li>Private balcony</li>
-  <li>Elevator access</li>
-  <li>Located in Campo de Ourique, Lisbon</li>
+  <li>140 sqm of elegant living space</li>
+  <li>3 bedrooms with built-in wardrobes</li>
+  <li>2 modern bathrooms with premium fixtures</li>
+  <li>Private balcony with neighborhood views</li>
+  <li>Recently renovated with high-end finishes</li>
+  <li>Elevator access in historic building</li>
 </ul>
-
 <section id="neighborhood">
-  <p>
-    Campo de Ourique is one of Lisbon’s most sought-after neighborhoods, known for its traditional charm, trendy cafés, and excellent schools. With green parks, local markets, and easy access to public transportation, it offers a perfect blend of comfort and convenience in the heart of the city.
-  </p>
+  <p>Príncipe Real stands as one of Lisbon's most sophisticated neighborhoods, renowned for its upscale boutiques, gourmet restaurants, and the beautiful Príncipe Real Garden. This central location offers excellent connectivity to the city center while maintaining a peaceful, residential atmosphere perfect for discerning buyers.</p>
 </section>
+<p class="call-to-action">Experience luxury living in Lisbon's most coveted neighborhood. Contact us today to schedule your exclusive viewing of this exceptional property.</p>
 
-<p class="call-to-action">Don't miss this opportunity—schedule your visit today and make this Lisbon apartment your new home.</p>
-
---- GOOD EXAMPLE OUTPUT ---
-{{
+EVALUATION: {{
   "structure_compliance": 5,
   "language_fluency_seo": 5,
   "multilingual_adaptability": 5,
@@ -41,57 +69,84 @@ HTML OUTPUT:
   "missing_or_invalid_tags": []
 }}
 
---- BAD EXAMPLE INPUT ---
-<title>T3 Apartment Lisbon</title>
-<meta name="description" content="A great place.">
-<h1>Apartment</h1>
+GOOD EXAMPLE (Score 4,4,4):
+<title>T3 Apartment for Sale in Campo de Ourique, Lisbon - €650K</title>
+<meta name="description" content="Spacious T3 apartment in Campo de Ourique with balcony and elevator access. Perfect for families seeking comfort in central Lisbon.">
+<h1>Modern 3-Bedroom Apartment in Campo de Ourique</h1>
+<section id="description">
+  <p>This attractive T3 apartment offers 120 sqm of comfortable living space in the heart of Campo de Ourique. Located on the second floor with elevator access, the property features three bedrooms, two bathrooms, and a private balcony. Built in 2005, it combines modern amenities with everyday comfort.</p>
+</section>
+<ul id="key-features">
+  <li>120 sqm living space</li>
+  <li>3 bedrooms, 2 bathrooms</li>
+  <li>Private balcony</li>
+  <li>Elevator access</li>
+</ul>
+<section id="neighborhood">
+  <p>Campo de Ourique is a sought-after neighborhood known for its cafés, schools, and convenient location near central Lisbon.</p>
+</section>
+<p class="call-to-action">Schedule your visit today to see this excellent apartment.</p>
 
---- BAD EXAMPLE OUTPUT ---
-{{
-  "structure_compliance": 0,
-  "language_fluency_seo": 2,
-  "multilingual_adaptability": 3,
-  "total_score": 1,
-  "missing_or_invalid_tags": ["meta description too short", "h1 too generic", "missing key-features section"]
+EVALUATION: {{
+  "structure_compliance": 4,
+  "language_fluency_seo": 4,
+  "multilingual_adaptability": 4,
+  "total_score": 4,
+  "missing_or_invalid_tags": ["title slightly over 60 chars", "neighborhood description could be more detailed"]
 }}
 
---- REQUIRED SECTIONS AND TAGS ---
-The HTML must include these elements:
-1. <title> – page title (max 60 chars)
-2. <meta name="description"> – meta description (max 155 chars)
-3. <h1> – main heading
-4. <section id="description"> – full property description
-5. <ul id="key-features"> – key features list
-6. <section id="neighborhood"> – neighborhood summary
-7. <p class="call-to-action"> – call to action
+MEDIOCRE EXAMPLE (Score 2,3,3):
+<title>Nice Apartment Lisbon</title>
+<meta name="description" content="Good apartment for sale.">
+<h1>Apartment for Sale</h1>
+<section id="description">
+  <p>This is an apartment with rooms and bathroom. It is good location and good price.</p>
+</section>
+<ul id="key-features">
+  <li>rooms</li>
+  <li>bathroom</li>
+</ul>
+<p class="call-to-action">Call us.</p>
 
---- EVALUATION CRITERIA (0–5 points each) ---
-1. structure_compliance: 
-   - 5 = all required tags present, valid, and in correct order  
-   - 4 = 1 issue (e.g., title too long, wrong order, or one missing tag)  
-   - 3 = 2–3 missing/invalid required tags  
-   - 2 = 4+ missing/invalid required tags  
-   - 1 = only 1 tag valid  
-   - 0 = no required tags present  
+EVALUATION: {{
+  "structure_compliance": 2,
+  "language_fluency_seo": 3,
+  "multilingual_adaptability": 3,
+  "total_score": 2,
+  "missing_or_invalid_tags": ["title too generic and short", "meta description too short", "h1 too generic", "missing neighborhood section", "features too vague", "poor grammar in description"]
+}}
 
-2. language_fluency_seo: 
-   Grammar, readability, keyword usage, and SEO effectiveness.
+BAD EXAMPLE (Score 0,1,2):
+<title>Apartment</title>
+<h1>For Sale</h1>
+<p>Nice place to live.</p>
 
-3. multilingual_adaptability: 
-   Content should match the language of the property JSON input.
+EVALUATION: {{
+  "structure_compliance": 0,
+  "language_fluency_seo": 1,
+  "multilingual_adaptability": 2,
+  "total_score": 0,
+  "missing_or_invalid_tags": ["missing meta description", "missing description section", "missing key-features", "missing neighborhood section", "missing call-to-action", "title too generic", "h1 too generic", "content too minimal"]
+}}
 
---- SCORING ---
-- Each criterion is scored 0–5.  
-- total_score = average of the three criteria, rounded down to nearest integer.
+--- CRITICAL EVALUATION INSTRUCTIONS ---
+1. CHECK EVERY REQUIRED TAG - Missing tags automatically reduce structure_compliance
+2. COUNT CHARACTERS - Title >60 or meta >155 chars = automatic deduction
+3. VERIFY IDs AND CLASSES - Missing id="description", id="key-features", id="neighborhood", class="call-to-action" = deductions
+4. ASSESS CONTENT QUALITY - Generic, vague, or poorly written content = lower scores
+5. BE STRICT - Most real-world content has issues. Don't give perfect scores easily.
+6. LOOK FOR SPECIFIC PROBLEMS - Empty sections, missing content, formatting issues
+
+--- SCORING FORMULA ---
+total_score = FLOOR((structure_compliance + language_fluency_seo + multilingual_adaptability) / 3)
 
 --- OUTPUT FORMAT ---
-Respond STRICTLY in JSON using this exact structure.  
-Do not include HTML, explanations, code fences, or any extra text.  
+Respond STRICTLY in JSON. No explanations, code fences, or extra text.
 
 {{
   "structure_compliance": <0-5>,
   "language_fluency_seo": <0-5>,
   "multilingual_adaptability": <0-5>,
   "total_score": <0-5>,
-  "missing_or_invalid_tags": [<list of problems or empty>]
+  "missing_or_invalid_tags": [<specific issues found>]
 }}

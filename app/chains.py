@@ -27,7 +27,10 @@ PROMPT_DIR = Path(__file__).resolve().parent / "prompts"
 generator_template = (PROMPT_DIR / "generator_prompt_gpt-4o-mini.txt").read_text()
 evaluator_template = (PROMPT_DIR / "evaluator_prompt_gpt-4-turbo.txt").read_text()
 
-generator_prompt = PromptTemplate(input_variables=["property_json"], template=generator_template)
+generator_prompt = PromptTemplate(
+    input_variables=["property_json", "language_name", "language_code"],
+    template=generator_template
+)
 evaluator_prompt = PromptTemplate(input_variables=["html_output"], template=evaluator_template)
 
 # Initialize ChatOpenAI with API key
@@ -48,7 +51,22 @@ def generate_and_evaluate(property_data: PropertyData):
     failed_criteria_log = []
 
     while retries < MAX_RETRIES:
-        html_output = generator_chain.invoke({"property_json": property_data.model_dump_json()})
+        property_dict = property_data.model_dump()
+        language_code = property_dict.get("language", "en")
+        
+        if language_code not in ["en", "pt", "es"]:
+            language_code = "en"
+        
+        logger.info("Language Code: %s", language_code)
+
+        language_names = {"en": "English", "pt": "Portuguese", "es": "Spanish"}
+        language_name = language_names[language_code]
+
+        html_output = generator_chain.invoke({
+            "property_json": property_data.model_dump_json(),
+            "language_name": language_name,
+            "language_code": language_code
+        })
         logger.info("HTML Output: %s", html_output)
         
         evaluation_str = evaluator_chain.invoke({"html_output": html_output})
