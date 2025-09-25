@@ -16,7 +16,7 @@ It uses FastAPI, LangChain, and OpenAI for generation and evaluation.
 
 ## Solution
 
-![alt text](image.png)
+![Solution Diagram](solution.png)
 
 ## Installation
  - ``` git clone https://github.com/fsystemweb/real-state-web-generator.git ```
@@ -89,7 +89,7 @@ Example response:
     - ``` http://localhost:5500/public/ ```
 
 
-## Evaluation Criteria
+## Evaluation Criteria by Request
 Each generated listing is automatically evaluated against:
 
 - ✅ Structure compliance (HTML tags + hierarchy)
@@ -97,6 +97,29 @@ Each generated listing is automatically evaluated against:
 - 🌍 Multilingual adaptability
 
 Each criterion is scored 0–5. The total score must be ≥ 3 to be accepted.
+
+## Evaluation Pipeline
+
+![Evaluation Pipeline Diagram](evaluation-pipeline.png)
+
+### Execution
+- ``` http://localhost:5500/public/ ```
+
+### Results 
+
+- Logs: ``` evaluation/results/evaluation_results.json ```
+
+#### Average score by language
+
+![Average score by language](evaluation/results/avg_scores_by_language.png)
+
+#### Missing tags by language
+
+![Missing tags by language](evaluation/results/missing_tags_by_language.png)
+
+#### Total score distribution
+
+![Total score distribution](evaluation/results/total_score_distribution.png)
 
 ## License
 MIT License – free to use and modify.

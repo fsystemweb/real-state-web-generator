@@ -1,6 +1,8 @@
-langchain==0.3.27 
-langchain-openai==0.3.33 
-python-dotenv==1.1.1 
-fastapi==0.112.2 
-uvicorn[standard]==0.36.0 
+langchain==0.3.27
+langchain-openai==0.3.33
+python-dotenv==1.1.1
+fastapi==0.112.2
+uvicorn[standard]==0.36.0
 pydantic==2.11.9
+pandas==2.2.3
+matplotlib==3.9.2

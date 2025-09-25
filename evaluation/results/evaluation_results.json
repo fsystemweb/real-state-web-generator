@@ -1,0 +1,514 @@
+[
+  {
+    "input": {
+      "title": "T2 em Alfama com vista para o rio",
+      "location": {
+        "city": "Lisboa",
+        "neighborhood": "Alfama"
+      },
+      "features": {
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "area_sqm": 85,
+        "balcony": true,
+        "parking": false,
+        "elevator": false,
+        "floor": 3,
+        "year_built": 1950
+      },
+      "price": 420000,
+      "listing_type": "sale",
+      "language": "pt"
+    },
+    "output": {
+      "html": "<title>T2 em Alfama à Venda com Vista para o Rio</title>\n\n<meta name=\"description\" content=\"Aconchegante T2 à venda em Lisboa, localizado em Alfama, com vista para o rio e varanda. Perfeito para quem busca charme e localização.\">\n\n<h1>Apartamento T2 em Alfama, Lisboa, com Vista para o Rio</h1>\n\n<section id=\"description\">\n  <p>\n    Descubra este encantador apartamento T2, localizado no coração de Alfama, um dos bairros mais tradicionais e pitorescos de Lisboa. Com 85 m², o imóvel dispõe de uma sala iluminada, dois quartos confortáveis e um banheiro moderno, todos com uma vista deslumbrante para o rio. Situado no terceiro andar de um edifício sem elevador, o apartamento possui uma varanda que proporciona um espaço perfeito para relaxar e apreciar a beleza da cidade. Construído em 1950, combina charme histórico com a vivacidade da vida lisboeta. Com um preço de venda de €420,000, é uma excelente oportunidade para quem deseja viver em um dos bairros mais icônicos de Lisboa.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>85 m² de área útil</li>\n  <li>2 quartos e 1 banheiro</li>\n  <li>Varanda com vista para o rio</li>\n  <li>Localizado no bairro de Alfama, Lisboa</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    Alfama é famoso por suas ruas estreitas e sinuosas, repletas de história e cultura. Este bairro encantador oferece uma variedade de restaurantes típicos, lojas locais e a famosa música de fado. Com fácil acesso ao transporte público e a poucos minutos do centro de Lisboa, Alfama é um lugar perfeito para quem busca um estilo de vida vibrante e autêntico na capital portuguesa.\n  </p>\n</section>\n\n<p class=\"call-to-action\">Não perca esta oportunidade—agende sua visita hoje e faça deste apartamento em Alfama seu novo lar.</p>",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 5,
+        "total_score": 5,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "Apartamento T1 moderno em Parque das Nações",
+      "location": {
+        "city": "Lisboa",
+        "neighborhood": "Parque das Nações"
+      },
+      "features": {
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "area_sqm": 70,
+        "balcony": true,
+        "parking": true,
+        "elevator": true,
+        "floor": 6,
+        "year_built": 2015
+      },
+      "price": 380000,
+      "listing_type": "sale",
+      "language": "pt"
+    },
+    "output": {
+      "html": "```html\n<title>Apartamento T1 à Venda em Parque das Nações, Lisboa</title>\n\n<meta name=\"description\" content=\"Moderno apartamento T1 à venda em Lisboa, com varanda, estacionamento e acesso a elevador, localizado em Parque das Nações.\">\n\n<h1>Apartamento T1 Moderno em Parque das Nações, Lisboa</h1>\n\n<section id=\"description\">\n  <p>\n    Apresentamos este encantador apartamento T1, localizado no 6º andar de um edifício moderno em Parque das Nações. Com 70 m² de área, o imóvel é ideal para quem procura conforto e praticidade. O apartamento conta com uma espaçosa sala de estar com acesso a uma varanda, perfeita para desfrutar do clima ameno de Lisboa. O quarto é bem iluminado e possui um banheiro moderno. Construído em 2015, oferece todas as comodidades necessárias, incluindo estacionamento e acesso a elevador. Com um preço de venda de €380,000, esta é uma oportunidade imperdível para quem deseja viver em uma das áreas mais dinâmicas da cidade.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>70 m² de área útil</li>\n  <li>1 quarto e 1 banheiro</li>\n  <li>Varanda privativa</li>\n  <li>Estacionamento disponível</li>\n  <li>Acesso a elevador</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    O Parque das Nações é uma das zonas mais modernas de Lisboa, conhecida pela sua arquitetura contemporânea e vasta oferta de serviços. Com espaços verdes, restaurantes, e a proximidade do rio Tejo, este bairro é ideal para quem aprecia um estilo de vida ativo. A área também é bem servida por transportes públicos, facilitando o acesso ao centro da cidade e a outras regiões.\n  </p>\n</section>\n\n<p class=\"call-to-action\">Não perca esta oportunidade—agende sua visita hoje e venha conhecer seu novo lar em Lisboa.</p>\n```",
+      "evaluation": {
+        "structure_compliance": 4,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 5,
+        "total_score": 4,
+        "missing_or_invalid_tags": [
+          "title 61 characters"
+        ]
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "T3 em Campo Pequeno com garagem",
+      "location": {
+        "city": "Lisboa",
+        "neighborhood": "Campo Pequeno"
+      },
+      "features": {
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "area_sqm": 130,
+        "balcony": false,
+        "parking": true,
+        "elevator": true,
+        "floor": 4,
+        "year_built": 1998
+      },
+      "price": 720000,
+      "listing_type": "sale",
+      "language": "pt"
+    },
+    "output": {
+      "html": "```html\n<title>T3 em Campo Pequeno à Venda</title>\n\n<meta name=\"description\" content=\"Espaçoso T3 à venda em Lisboa com garagem e acesso a elevador, localizado em Campo Pequeno. Ideal para famílias.\">\n\n<h1>Atrativo Apartamento T3 em Campo Pequeno, Lisboa</h1>\n\n<section id=\"description\">\n  <p>\n    Situado no coração do Campo Pequeno, este encantador apartamento T3 oferece 130 sqm de espaço bem distribuído, ideal para famílias que buscam conforto e praticidade. Localizado no quarto andar de um edifício com elevador, a propriedade conta com três quartos espaçosos e duas casas de banho modernas. Além disso, o imóvel dispõe de uma garagem, uma característica valiosa em Lisboa. Construído em 1998, este apartamento combina estilo e funcionalidade em um só lugar. Com um preço de venda de €720,000, é uma excelente oportunidade para quem deseja viver em uma das áreas mais dinâmicas da cidade.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>130 sqm de área útil</li>\n  <li>3 quartos e 2 casas de banho</li>\n  <li>Garagem disponível</li>\n  <li>Acesso a elevador</li>\n  <li>Localizado em Campo Pequeno, Lisboa</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    Campo Pequeno é uma das zonas mais vibrantes de Lisboa, conhecida por sua rica oferta cultural e gastronômica. A área possui excelentes acessos aos transportes públicos, com fácil ligação ao centro da cidade e outras áreas. Com uma variedade de lojas, restaurantes e espaços verdes, Campo Pequeno oferece um estilo de vida urbano, mantendo a tranquilidade necessária para o dia a dia.\n  </p>\n</section>\n\n<p class=\"call-to-action\">Não perca esta oportunidade—agende sua visita hoje mesmo e venha conhecer este apartamento em Lisboa!</p>\n```",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 5,
+        "total_score": 5,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "Apartamento T2 renovado em Graça",
+      "location": {
+        "city": "Lisboa",
+        "neighborhood": "Graça"
+      },
+      "features": {
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "area_sqm": 95,
+        "balcony": true,
+        "parking": false,
+        "elevator": false,
+        "floor": 1,
+        "year_built": 1935
+      },
+      "price": 350000,
+      "listing_type": "sale",
+      "language": "pt"
+    },
+    "output": {
+      "html": "```html\n<title>Apartamento T2 para Venda em Graça, Lisboa</title>\n\n<meta name=\"description\" content=\"Apartamento T2 renovado à venda em Lisboa, com varanda e localizado na encantadora Graça. Ideal para quem busca conforto no centro da cidade.\">\n\n<h1>Apartamento Renovado T2 em Graça, Lisboa</h1>\n\n<section id=\"description\">\n  <p>\n    Este encantador apartamento T2, localizado no coração de Graça, apresenta 95 m² de espaço bem distribuído e uma atmosfera acolhedora. Situado no primeiro andar de um edifício histórico, o imóvel possui dois dormitórios aconchegantes, um banheiro moderno e uma varanda que convida a desfrutar do clima ameno de Lisboa. Construído em 1935, o apartamento combina charme antigo com toques contemporâneos, proporcionando um lar confortável e prático. Com um preço de venda de €350,000, é uma excelente oportunidade para quem busca viver em uma das áreas mais vibrantes da cidade.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>95 m² de área útil</li>\n  <li>2 quartos e 1 banheiro</li>\n  <li>Varanda privativa</li>\n  <li>Localizado em Graça, Lisboa</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    Graça é um dos bairros mais tradicionais de Lisboa, famoso por suas ruas encantadoras, miradouros deslumbrantes e uma atmosfera vibrante. Com uma rica oferta cultural, cafés acolhedores e mercados locais, este bairro proporciona uma experiência de vida única e autêntica, ideal para quem valoriza a proximidade com a cultura e a história da cidade.\n  </p>\n</section>\n\n<p class=\"call-to-action\">Não perca esta oportunidade—agende sua visita hoje e venha conhecer seu novo lar em Lisboa.</p>\n```",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 4,
+        "total_score": 4,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "Penthouse T4 em Avenidas Novas",
+      "location": {
+        "city": "Lisboa",
+        "neighborhood": "Avenidas Novas"
+      },
+      "features": {
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "area_sqm": 200,
+        "balcony": true,
+        "parking": true,
+        "elevator": true,
+        "floor": 8,
+        "year_built": 2010
+      },
+      "price": 1250000,
+      "listing_type": "sale",
+      "language": "pt"
+    },
+    "output": {
+      "html": "```html\n<title>Penthouse T4 à Venda em Avenidas Novas, Lisboa</title>\n\n<meta name=\"description\" content=\"Luxuosa penthouse T4 à venda em Lisboa com varanda, estacionamento e acesso a elevador, localizada em Avenidas Novas.\">\n\n<h1>Espetacular Penthouse T4 em Avenidas Novas, Lisboa</h1>\n\n<section id=\"description\">\n  <p>\n    Descubra a magnífica penthouse T4 em Avenidas Novas, Lisboa, com 200 m² de área, situada no oitavo andar de um edifício moderno construído em 2010. Este imóvel impressionante oferece quatro quartos espaçosos e três banheiros, ideal para famílias que buscam conforto e elegância. A propriedade conta com uma varanda privativa, perfeita para desfrutar das vistas deslumbrantes da cidade, além de estacionamento e acesso a elevador. Com um preço de venda de €1.250.000, esta penthouse representa uma oportunidade única para quem deseja viver com estilo em uma das áreas mais desejadas de Lisboa.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>200 m² de área útil</li>\n  <li>4 quartos e 3 banheiros</li>\n  <li>Varanda privada</li>\n  <li>Estacionamento disponível</li>\n  <li>Acesso a elevador</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    Avenidas Novas é um dos bairros mais elegantes de Lisboa, conhecido por sua arquitetura moderna, boutiques sofisticadas e uma variedade de opções gastronômicas. Com fácil acesso a transportes públicos, este bairro combina conforto e conveniência, tornando-se um local ideal para viver e aproveitar tudo que a cidade tem a oferecer.\n  </p>\n</section>\n\n<p class=\"call-to-action\">Não perca essa oportunidade—agende sua visita hoje e venha conhecer esta incrível penthouse em Lisboa.</p>\n```",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 4,
+        "total_score": 4,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "1-Bedroom Apartment in Notting Hill",
+      "location": {
+        "city": "London",
+        "neighborhood": "Notting Hill"
+      },
+      "features": {
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "area_sqm": 55,
+        "balcony": false,
+        "parking": false,
+        "elevator": true,
+        "floor": 2,
+        "year_built": 1975
+      },
+      "price": 2200,
+      "listing_type": "rent",
+      "language": "en"
+    },
+    "output": {
+      "html": "<title>1-Bedroom Apartment for Rent in Notting Hill, London</title>\n\n<meta name=\"description\" content=\"Charming 1-bedroom apartment for rent in Notting Hill, London. Modern living with elevator access, perfect for singles or couples.\">\n\n<h1>Cozy 1-Bedroom Apartment in Notting Hill, London</h1>\n\n<section id=\"description\">\n  <p>\n    Discover this charming 1-bedroom apartment located in the heart of Notting Hill, London. Spanning 55 sqm, this well-appointed unit is situated on the second floor of a secure building with elevator access, making it convenient and accessible. The apartment features a spacious bedroom, a modern bathroom, and a bright living area that is perfect for relaxation or entertaining. Built in 1975, this property has retained its classic charm while offering the comforts of modern living. With a rental price of £2,200 per month, this apartment is ideal for singles or couples looking to enjoy the vibrant Notting Hill lifestyle.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>55 sqm of living space</li>\n  <li>1 bedroom and 1 bathroom</li>\n  <li>Elevator access</li>\n  <li>Located in Notting Hill, London</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    Notting Hill is renowned for its colorful streets, trendy shops, and vibrant cultural scene. With its famous Portobello Road Market, exquisite dining options, and beautiful parks, it offers a unique blend of urban living and community charm. Enjoy easy access to public transport, making it simple to explore all that London has to offer.\n  </p>\n</section>\n\n<p class=\"call-to-action\">Don't miss out—schedule your viewing today and make this Notting Hill apartment your new home.</p>",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 5,
+        "total_score": 5,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "Studio in Canary Wharf with River View",
+      "location": {
+        "city": "London",
+        "neighborhood": "Canary Wharf"
+      },
+      "features": {
+        "bedrooms": 0,
+        "bathrooms": 1,
+        "area_sqm": 40,
+        "balcony": true,
+        "parking": true,
+        "elevator": true,
+        "floor": 10,
+        "year_built": 2018
+      },
+      "price": 1800,
+      "listing_type": "rent",
+      "language": "en"
+    },
+    "output": {
+      "html": "<title>Studio for Rent in Canary Wharf, London</title>\n\n<meta name=\"description\" content=\"Charming studio for rent in Canary Wharf with river views, balcony, and parking. Perfect for professionals seeking city living.\">\n\n<h1>Modern Studio Apartment in Canary Wharf, London</h1>\n\n<section id=\"description\">\n  <p>\n    Discover this stylish studio apartment located on the 10th floor in the heart of Canary Wharf. Spanning 40 sqm, this contemporary property offers stunning river views and an abundance of natural light. The apartment features a well-designed living space, a modern bathroom, and a private balcony ideal for unwinding after a long day. Built in 2018, it comes equipped with an elevator and parking facilities, making it a perfect choice for professionals looking for convenience and comfort in one of London’s most vibrant areas. Available for rent at £1,800 per month, this studio is an excellent opportunity for those wishing to immerse themselves in city life.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>40 sqm of living space</li>\n  <li>Modern bathroom</li>\n  <li>Private balcony with river views</li>\n  <li>Parking available</li>\n  <li>Located in Canary Wharf, London</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    Canary Wharf is a bustling business district known for its striking skyscrapers, high-end shops, and gourmet restaurants. With a vibrant atmosphere and excellent transport links, it provides easy access to the rest of London. The area is also home to beautiful waterfronts and parks, making it an ideal location for those who appreciate both urban living and green spaces.\n  </p>\n</section>\n\n<p class=\"call-to-action\">Don't miss out on this fantastic opportunity—contact us today to schedule a viewing of this Canary Wharf studio!</p>",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 5,
+        "total_score": 5,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "2-Bedroom Apartment in Camden Town",
+      "location": {
+        "city": "London",
+        "neighborhood": "Camden Town"
+      },
+      "features": {
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "area_sqm": 75,
+        "balcony": false,
+        "parking": false,
+        "elevator": false,
+        "floor": 3,
+        "year_built": 1900
+      },
+      "price": 2600,
+      "listing_type": "rent",
+      "language": "en"
+    },
+    "output": {
+      "html": "<title>2-Bedroom Apartment for Rent in Camden Town, London</title>\n\n<meta name=\"description\" content=\"Charming 2-bedroom apartment for rent in Camden Town, London. Ideal location close to amenities and public transport.\">\n\n<h1>Cozy 2-Bedroom Apartment in Camden Town, London</h1>\n\n<section id=\"description\">\n  <p>\n    Discover this charming 2-bedroom apartment located in the vibrant neighborhood of Camden Town, London. Spanning 75 sqm, this inviting third-floor flat is perfect for individuals or couples seeking a lively urban lifestyle. The apartment features two cozy bedrooms and a modern bathroom. While it does not include a balcony or parking, its central location ensures you are just steps away from Camden's eclectic markets, trendy cafés, and excellent public transport links. Built in 1900, this property retains its historic charm while providing a comfortable living space. With a rental price of £2,600 per month, this apartment is an excellent opportunity to experience the unique culture of Camden Town.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>75 sqm of living space</li>\n  <li>2 bedrooms and 1 bathroom</li>\n  <li>Located on the 3rd floor</li>\n  <li>Historic building dating back to 1900</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    Camden Town is famous for its vibrant atmosphere and diverse culture. With an array of markets, live music venues, and food stalls, it offers a unique blend of creativity and community. The area's excellent transport links make it easy to explore the rest of London, while its lively streets provide a constant buzz of activity and excitement.\n  </p>\n</section>\n\n<p class=\"call-to-action\">Don't miss out on this fantastic rental opportunity—contact us today to arrange a viewing!</p>",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 5,
+        "total_score": 5,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "3-Bedroom Penthouse in Kensington",
+      "location": {
+        "city": "London",
+        "neighborhood": "Kensington"
+      },
+      "features": {
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "area_sqm": 150,
+        "balcony": true,
+        "parking": true,
+        "elevator": true,
+        "floor": 7,
+        "year_built": 2005
+      },
+      "price": 5800,
+      "listing_type": "rent",
+      "language": "en"
+    },
+    "output": {
+      "html": "<title>3-Bedroom Penthouse for Rent in Kensington, London</title>\n\n<meta name=\"description\" content=\"Stylish 3-bedroom penthouse for rent in Kensington, featuring a private balcony, parking, and elevator access. Perfect for upscale urban living.\">\n\n<h1>Luxurious 3-Bedroom Penthouse in Kensington, London</h1>\n\n<section id=\"description\">\n  <p>\n    Experience the pinnacle of urban living in this stunning 3-bedroom penthouse located in the prestigious neighborhood of Kensington, London. Spanning 150 sqm, this modern residence offers a spacious open-plan layout with floor-to-ceiling windows that flood the living area with natural light. Situated on the seventh floor, the penthouse features two stylish bathrooms and a private balcony, ideal for relaxing after a long day. Built in 2005, this property is equipped with an elevator and includes the convenience of parking. With a rental price of £5,800 per month, this penthouse is perfect for families or professionals seeking a luxurious lifestyle in one of London’s most desirable areas.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>150 sqm of living space</li>\n  <li>3 bedrooms and 2 bathrooms</li>\n  <li>Private balcony</li>\n  <li>Parking available</li>\n  <li>Elevator access</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    Kensington is renowned for its elegant streets, high-end boutiques, and cultural attractions. With nearby parks, museums, and excellent dining options, residents enjoy a vibrant lifestyle in a serene environment. The area boasts great transport links, making it easy to explore all that London has to offer.\n  </p>\n</section>\n\n<p class=\"call-to-action\">Don't miss this chance—contact us today to schedule a viewing of this exceptional Kensington penthouse.</p>",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 5,
+        "multilingual_adaptability": 5,
+        "total_score": 5,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "Modern 2-Bedroom Apartment in Shoreditch",
+      "location": {
+        "city": "London",
+        "neighborhood": "Shoreditch"
+      },
+      "features": {
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "area_sqm": 95,
+        "balcony": true,
+        "parking": false,
+        "elevator": true,
+        "floor": 5,
+        "year_built": 2012
+      },
+      "price": 3200,
+      "listing_type": "rent",
+      "language": "en"
+    },
+    "output": {
+      "html": "<title>Modern 2-Bedroom Apartment for Rent in Shoreditch, London</title>\n\n<meta name=\"description\" content=\"Stylish 2-bedroom apartment for rent in Shoreditch, London. Enjoy modern living with elevator access and a private balcony.\">\n\n<h1>Contemporary 2-Bedroom Apartment in Shoreditch, London</h1>\n\n<section id=\"description\">\n  <p>\n    This stunning modern 2-bedroom apartment, located in the vibrant neighborhood of Shoreditch, offers an exceptional living experience. Spanning across 95 sqm, this fifth-floor unit is accessible via an elevator and features two spacious bedrooms, each designed with comfort and style in mind. The apartment includes two well-appointed bathrooms, ensuring convenience for residents and guests alike. A private balcony provides a perfect spot to unwind and enjoy the lively atmosphere of Shoreditch. With a rental price of £3,200 per month, this property is an ideal choice for professionals or small families seeking a dynamic urban lifestyle in one of London's trendiest areas.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>95 sqm of living space</li>\n  <li>2 bedrooms and 2 bathrooms</li>\n  <li>Private balcony</li>\n  <li>Elevator access</li>\n  <li>Located in Shoreditch, London</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    Shoreditch is renowned for its artistic flair, vibrant nightlife, and an eclectic mix of restaurants and cafés. This neighborhood is a hub for creativity and innovation, making it a prime location for those who appreciate a lively urban environment. With excellent transport links and a variety of amenities, Shoreditch offers residents both convenience and excitement, making it a sought-after area in London.\n  </p>\n</section>\n\n<p class=\"call-to-action\">Don’t miss out on this fantastic rental opportunity—schedule a viewing today and experience all that this Shoreditch apartment has to offer!</p>",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 5,
+        "total_score": 5,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "Piso T2 en Malasaña con balcón",
+      "location": {
+        "city": "Madrid",
+        "neighborhood": "Malasaña"
+      },
+      "features": {
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "area_sqm": 80,
+        "balcony": true,
+        "parking": false,
+        "elevator": true,
+        "floor": 3,
+        "year_built": 1970
+      },
+      "price": 1500,
+      "listing_type": "rent",
+      "language": "es"
+    },
+    "output": {
+      "html": "```html\n<title>Piso T2 en Alquiler en Malasaña, Madrid</title>\n\n<meta name=\"description\" content=\"Acogedor piso T2 en alquiler en Malasaña, Madrid, con balcón y acceso a ascensor. Ideal para parejas o profesionales.\">\n\n<h1>Encantador Piso de 2 Habitaciones en Malasaña, Madrid</h1>\n\n<section id=\"description\">\n  <p>\n    Este acogedor piso T2 se encuentra en el vibrante barrio de Malasaña, Madrid, ofreciendo 80 m² de espacio bien distribuido. Ubicado en el tercer piso de un edificio con ascensor, la propiedad cuenta con dos cómodas habitaciones y un baño moderno. Además, disfrutarás de un balcón privado, ideal para relajarte y disfrutar del ambiente madrileño. Construido en 1970, este piso combina el encanto clásico con la funcionalidad moderna. Con un precio de alquiler de 1,500 € al mes, es una excelente opción para parejas o profesionales que buscan un hogar en el corazón de la ciudad.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>80 m² de espacio habitable</li>\n  <li>2 habitaciones y 1 baño</li>\n  <li>Balcón privado</li>\n  <li>Acceso a ascensor</li>\n  <li>Ubicado en Malasaña, Madrid</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    Malasaña es uno de los barrios más emblemáticos de Madrid, conocido por su ambiente bohemio, cafés con encanto y una vibrante vida nocturna. Con una amplia oferta cultural, tiendas únicas y acceso fácil al transporte público, Malasaña ofrece una experiencia de vida urbana inigualable.\n  </p>\n</section>\n\n<p class=\"call-to-action\">No pierdas esta oportunidad—¡agenda tu visita hoy y haz de este piso tu nuevo hogar en Madrid!</p>\n```",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 5,
+        "total_score": 5,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "Ático T3 en Salamanca con terraza",
+      "location": {
+        "city": "Madrid",
+        "neighborhood": "Salamanca"
+      },
+      "features": {
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "area_sqm": 140,
+        "balcony": true,
+        "parking": true,
+        "elevator": true,
+        "floor": 6,
+        "year_built": 2008
+      },
+      "price": 950000,
+      "listing_type": "sale",
+      "language": "es"
+    },
+    "output": {
+      "html": "<title>Ático T3 en Venta en Salamanca, Madrid</title>\n\n<meta name=\"description\" content=\"Espectacular ático T3 en venta en Madrid, con terraza y acceso a ascensor, ubicado en el elegante barrio de Salamanca. Ideal para familias.\">\n\n<h1>Elegante Ático de 3 Habitaciones en Salamanca, Madrid</h1>\n\n<section id=\"description\">\n  <p>\n    Situado en el prestigioso barrio de Salamanca, este impresionante ático T3 ofrece 140 m² de espacio luminoso y moderno. Ubicado en el sexto piso de un edificio bien conservado con acceso a ascensor, la propiedad cuenta con tres amplias habitaciones, dos baños elegantes y una terraza privada ideal para disfrutar de las vistas de Madrid. Construido en 2008, este ático combina un diseño contemporáneo con todas las comodidades necesarias para un estilo de vida cómodo. Con un precio de venta de €950,000, es una excelente oportunidad para familias o profesionales que buscan vivir en una de las zonas más exclusivas de Madrid.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>140 m² de espacio habitable</li>\n  <li>3 habitaciones y 2 baños</li>\n  <li>Terraza privada</li>\n  <li>Acceso a ascensor</li>\n  <li>Ubicado en Salamanca, Madrid</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    Salamanca es uno de los barrios más elegantes y exclusivos de Madrid, conocido por sus boutiques de lujo, restaurantes gourmet y espacios culturales. Con hermosos parques, mercados locales y fácil acceso al transporte público, ofrece una mezcla perfecta de confort y conveniencia en el corazón de la ciudad.\n  </p>\n</section>\n\n<p class=\"call-to-action\">No pierdas esta oportunidad—programa tu visita hoy y haz de este ático en Madrid tu nuevo hogar.</p>",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 5,
+        "total_score": 5,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "Estudio en Lavapiés reformado",
+      "location": {
+        "city": "Madrid",
+        "neighborhood": "Lavapiés"
+      },
+      "features": {
+        "bedrooms": 0,
+        "bathrooms": 1,
+        "area_sqm": 45,
+        "balcony": false,
+        "parking": false,
+        "elevator": false,
+        "floor": 1,
+        "year_built": 1925
+      },
+      "price": 900,
+      "listing_type": "rent",
+      "language": "es"
+    },
+    "output": {
+      "html": "```html\n<title>Estudio Reformado en Alquiler en Lavapiés, Madrid</title>\n\n<meta name=\"description\" content=\"Acogedor estudio reformado en alquiler en Madrid, ubicado en el vibrante barrio de Lavapiés. Ideal para profesionales y estudiantes.\">\n\n<h1>Estudio Moderno en Lavapiés, Madrid</h1>\n\n<section id=\"description\">\n  <p>\n    Este acogedor estudio reformado en el corazón de Lavapiés ofrece 45 m² de espacio bien distribuido. Situado en la primera planta de un edificio histórico construido en 1925, el estudio cuenta con un baño moderno y es ideal para quienes buscan un espacio funcional en una de las zonas más vibrantes de Madrid. Aunque no dispone de balcón ni ascensor, su ubicación le permite disfrutar de la vida urbana, con acceso a una amplia variedad de restaurantes, tiendas y opciones de transporte público. Con un precio de alquiler de €900 al mes, este estudio representa una excelente oportunidad para profesionales o estudiantes que deseen vivir en el centro de la ciudad.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>45 m² de espacio habitable</li>\n  <li>1 baño</li>\n  <li>Ubicado en Lavapiés, Madrid</li>\n  <li>Construido en 1925</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    Lavapiés es uno de los barrios más multiculturales y dinámicos de Madrid, conocido por su ambiente artístico, sus animados mercados y su rica oferta gastronómica. Aquí, los residentes pueden disfrutar de una mezcla de cultura, historia y modernidad, con fácil acceso a museos, galerías de arte y una vibrante vida nocturna.\n  </p>\n</section>\n\n<p class=\"call-to-action\">No pierdas esta oportunidad—¡programa tu visita hoy mismo y descubre tu nuevo hogar en Madrid!</p>\n```",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 5,
+        "total_score": 5,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "Piso T4 en Chamartín con garaje",
+      "location": {
+        "city": "Madrid",
+        "neighborhood": "Chamartín"
+      },
+      "features": {
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "area_sqm": 160,
+        "balcony": true,
+        "parking": true,
+        "elevator": true,
+        "floor": 5,
+        "year_built": 1995
+      },
+      "price": 1250000,
+      "listing_type": "sale",
+      "language": "es"
+    },
+    "output": {
+      "html": "```html\n<title>Piso T4 en Venta en Chamartín, Madrid</title>\n\n<meta name=\"description\" content=\"Amplio piso T4 en venta en Madrid con garaje y acceso a ascensor, ubicado en el barrio de Chamartín. Ideal para familias.\">\n\n<h1>Moderno Piso de 4 Habitaciones en Chamartín, Madrid</h1>\n\n<section id=\"description\">\n  <p>\n    Situado en el codiciado barrio de Chamartín, este espacioso piso T4 ofrece 160 m² de confort y luminosidad. Ubicado en el quinto piso de un edificio bien mantenido con acceso a ascensor, la propiedad cuenta con cuatro amplias habitaciones y tres baños modernos, ideales para familias. Además, dispone de un balcón donde disfrutar del aire fresco y la vista de la ciudad. Construido en 1995, este piso combina un diseño contemporáneo con la comodidad del día a día. Con un precio de venta de €1,250,000, es una excelente oportunidad para quienes buscan una vida urbana en Madrid.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>160 m² de espacio habitable</li>\n  <li>4 habitaciones y 3 baños</li>\n  <li>Balcón privado</li>\n  <li>Garaje disponible</li>\n  <li>Acceso a ascensor</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    Chamartín es uno de los barrios más exclusivos de Madrid, conocido por su ambiente residencial y su cercanía a servicios de calidad. Con excelentes opciones de transporte público, parques verdes y una variedad de restaurantes y tiendas, Chamartín ofrece una mezcla perfecta de comodidad y estilo de vida urbano.\n  </p>\n</section>\n\n<p class=\"call-to-action\">No pierdas esta oportunidad: agenda tu visita hoy y haz de este piso en Madrid tu nuevo hogar.</p>\n```",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 5,
+        "total_score": 5,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  },
+  {
+    "input": {
+      "title": "Apartamento T1 moderno en La Latina",
+      "location": {
+        "city": "Madrid",
+        "neighborhood": "La Latina"
+      },
+      "features": {
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "area_sqm": 60,
+        "balcony": false,
+        "parking": false,
+        "elevator": true,
+        "floor": 4,
+        "year_built": 2010
+      },
+      "price": 1200,
+      "listing_type": "rent",
+      "language": "es"
+    },
+    "output": {
+      "html": "```html\n<title>Apartamento T1 en Alquiler en La Latina, Madrid</title>\n\n<meta name=\"description\" content=\"Moderno apartamento T1 en alquiler en La Latina, Madrid, con acceso a ascensor y a pocos pasos de atracciones locales. Ideal para jóvenes profesionales.\">\n\n<h1>Apartamento T1 Moderno en La Latina, Madrid</h1>\n\n<section id=\"description\">\n  <p>\n    Descubre este encantador apartamento T1 ubicado en el corazón de La Latina, uno de los barrios más vibrantes de Madrid. Con una superficie de 60 m², este apartamento en el cuarto piso de un edificio moderno, cuenta con acceso a ascensor y una distribución funcional perfecta para jóvenes profesionales o parejas. Construido en 2010, ofrece un ambiente contemporáneo y acogedor. Por un alquiler de €1,200 al mes, esta propiedad es una excelente oportunidad para aquellos que buscan vivir en una de las zonas más animadas de Madrid, cerca de bares, restaurantes y transporte público.\n  </p>\n</section>\n\n<ul id=\"key-features\">\n  <li>60 m² de espacio habitable</li>\n  <li>1 dormitorio y 1 baño</li>\n  <li>Acceso a ascensor</li>\n  <li>Ubicado en La Latina, Madrid</li>\n</ul>\n\n<section id=\"neighborhood\">\n  <p>\n    La Latina es conocida por su ambiente animado, con calles llenas de historia, tapas y cultura. Este barrio ofrece una mezcla de tradición y modernidad, con mercados locales, plazas encantadoras y una vida nocturna vibrante. Es un lugar ideal para aquellos que buscan sumergirse en la vida madrileña.\n  </p>\n</section>\n\n<p class=\"call-to-action\">No pierdas esta oportunidad—programa tu visita hoy y descubre tu nuevo hogar en Madrid.</p>\n```",
+      "evaluation": {
+        "structure_compliance": 5,
+        "language_fluency_seo": 4,
+        "multilingual_adaptability": 5,
+        "total_score": 5,
+        "missing_or_invalid_tags": []
+      },
+      "retries": 0,
+      "failed_criteria_log": []
+    }
+  }
+]

@@ -1,0 +1,302 @@
+[
+    {
+        "title": "T2 em Alfama com vista para o rio",
+        "location": {
+            "city": "Lisboa",
+            "neighborhood": "Alfama"
+        },
+        "features": {
+            "bedrooms": 2,
+            "bathrooms": 1,
+            "area_sqm": 85,
+            "balcony": true,
+            "parking": false,
+            "elevator": false,
+            "floor": 3,
+            "year_built": 1950
+        },
+        "price": 420000,
+        "listing_type": "sale",
+        "language": "pt"
+    },
+    {
+        "title": "Apartamento T1 moderno em Parque das Nações",
+        "location": {
+            "city": "Lisboa",
+            "neighborhood": "Parque das Nações"
+        },
+        "features": {
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "area_sqm": 70,
+            "balcony": true,
+            "parking": true,
+            "elevator": true,
+            "floor": 6,
+            "year_built": 2015
+        },
+        "price": 380000,
+        "listing_type": "sale",
+        "language": "pt"
+    },
+    {
+        "title": "T3 em Campo Pequeno com garagem",
+        "location": {
+            "city": "Lisboa",
+            "neighborhood": "Campo Pequeno"
+        },
+        "features": {
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "area_sqm": 130,
+            "balcony": false,
+            "parking": true,
+            "elevator": true,
+            "floor": 4,
+            "year_built": 1998
+        },
+        "price": 720000,
+        "listing_type": "sale",
+        "language": "pt"
+    },
+    {
+        "title": "Apartamento T2 renovado em Graça",
+        "location": {
+            "city": "Lisboa",
+            "neighborhood": "Graça"
+        },
+        "features": {
+            "bedrooms": 2,
+            "bathrooms": 1,
+            "area_sqm": 95,
+            "balcony": true,
+            "parking": false,
+            "elevator": false,
+            "floor": 1,
+            "year_built": 1935
+        },
+        "price": 350000,
+        "listing_type": "sale",
+        "language": "pt"
+    },
+    {
+        "title": "Penthouse T4 em Avenidas Novas",
+        "location": {
+            "city": "Lisboa",
+            "neighborhood": "Avenidas Novas"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area_sqm": 200,
+            "balcony": true,
+            "parking": true,
+            "elevator": true,
+            "floor": 8,
+            "year_built": 2010
+        },
+        "price": 1250000,
+        "listing_type": "sale",
+        "language": "pt"
+    },
+    {
+        "title": "1-Bedroom Apartment in Notting Hill",
+        "location": {
+            "city": "London",
+            "neighborhood": "Notting Hill"
+        },
+        "features": {
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "area_sqm": 55,
+            "balcony": false,
+            "parking": false,
+            "elevator": true,
+            "floor": 2,
+            "year_built": 1975
+        },
+        "price": 2200,
+        "listing_type": "rent",
+        "language": "en"
+    },
+    {
+        "title": "Studio in Canary Wharf with River View",
+        "location": {
+            "city": "London",
+            "neighborhood": "Canary Wharf"
+        },
+        "features": {
+            "bedrooms": 0,
+            "bathrooms": 1,
+            "area_sqm": 40,
+            "balcony": true,
+            "parking": true,
+            "elevator": true,
+            "floor": 10,
+            "year_built": 2018
+        },
+        "price": 1800,
+        "listing_type": "rent",
+        "language": "en"
+    },
+    {
+        "title": "2-Bedroom Apartment in Camden Town",
+        "location": {
+            "city": "London",
+            "neighborhood": "Camden Town"
+        },
+        "features": {
+            "bedrooms": 2,
+            "bathrooms": 1,
+            "area_sqm": 75,
+            "balcony": false,
+            "parking": false,
+            "elevator": false,
+            "floor": 3,
+            "year_built": 1900
+        },
+        "price": 2600,
+        "listing_type": "rent",
+        "language": "en"
+    },
+    {
+        "title": "3-Bedroom Penthouse in Kensington",
+        "location": {
+            "city": "London",
+            "neighborhood": "Kensington"
+        },
+        "features": {
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "area_sqm": 150,
+            "balcony": true,
+            "parking": true,
+            "elevator": true,
+            "floor": 7,
+            "year_built": 2005
+        },
+        "price": 5800,
+        "listing_type": "rent",
+        "language": "en"
+    },
+    {
+        "title": "Modern 2-Bedroom Apartment in Shoreditch",
+        "location": {
+            "city": "London",
+            "neighborhood": "Shoreditch"
+        },
+        "features": {
+            "bedrooms": 2,
+            "bathrooms": 2,
+            "area_sqm": 95,
+            "balcony": true,
+            "parking": false,
+            "elevator": true,
+            "floor": 5,
+            "year_built": 2012
+        },
+        "price": 3200,
+        "listing_type": "rent",
+        "language": "en"
+    },
+    {
+        "title": "Piso T2 en Malasaña con balcón",
+        "location": {
+            "city": "Madrid",
+            "neighborhood": "Malasaña"
+        },
+        "features": {
+            "bedrooms": 2,
+            "bathrooms": 1,
+            "area_sqm": 80,
+            "balcony": true,
+            "parking": false,
+            "elevator": true,
+            "floor": 3,
+            "year_built": 1970
+        },
+        "price": 1500,
+        "listing_type": "rent",
+        "language": "es"
+    },
+    {
+        "title": "Ático T3 en Salamanca con terraza",
+        "location": {
+            "city": "Madrid",
+            "neighborhood": "Salamanca"
+        },
+        "features": {
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "area_sqm": 140,
+            "balcony": true,
+            "parking": true,
+            "elevator": true,
+            "floor": 6,
+            "year_built": 2008
+        },
+        "price": 950000,
+        "listing_type": "sale",
+        "language": "es"
+    },
+    {
+        "title": "Estudio en Lavapiés reformado",
+        "location": {
+            "city": "Madrid",
+            "neighborhood": "Lavapiés"
+        },
+        "features": {
+            "bedrooms": 0,
+            "bathrooms": 1,
+            "area_sqm": 45,
+            "balcony": false,
+            "parking": false,
+            "elevator": false,
+            "floor": 1,
+            "year_built": 1925
+        },
+        "price": 900,
+        "listing_type": "rent",
+        "language": "es"
+    },
+    {
+        "title": "Piso T4 en Chamartín con garaje",
+        "location": {
+            "city": "Madrid",
+            "neighborhood": "Chamartín"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area_sqm": 160,
+            "balcony": true,
+            "parking": true,
+            "elevator": true,
+            "floor": 5,
+            "year_built": 1995
+        },
+        "price": 1250000,
+        "listing_type": "sale",
+        "language": "es"
+    },
+    {
+        "title": "Apartamento T1 moderno en La Latina",
+        "location": {
+            "city": "Madrid",
+            "neighborhood": "La Latina"
+        },
+        "features": {
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "area_sqm": 60,
+            "balcony": false,
+            "parking": false,
+            "elevator": true,
+            "floor": 4,
+            "year_built": 2010
+        },
+        "price": 1200,
+        "listing_type": "rent",
+        "language": "es"
+    }
+]
