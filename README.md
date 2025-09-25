@@ -86,7 +86,7 @@ Example response:
  2. Start Webapp
   - ``` python -m http.server 5500```
  3. Open browser on this url:
-    - ``` http://localhost:5500/webapp.html ```
+    - ``` http://localhost:5500/public/ ```
 
 
 ## Evaluation Criteria

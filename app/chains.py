@@ -9,8 +9,8 @@ from pathlib import Path
 from fastapi import HTTPException
 from app.models import PropertyData
 from langchain_openai import ChatOpenAI
-from langchain.chains import LLMChain
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 
 # Setup logging
 logger = logging.getLogger(__name__)
@@ -31,12 +31,13 @@ generator_prompt = PromptTemplate(input_variables=["property_json"], template=ge
 evaluator_prompt = PromptTemplate(input_variables=["html_output"], template=evaluator_template)
 
 # Initialize ChatOpenAI with API key
-generator_llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.7, openai_api_key=openai_api_key)
-evaluator_llm = ChatOpenAI(model_name="gpt-4-turbo", temperature=0, openai_api_key=openai_api_key)
+generator_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.7, api_key=openai_api_key)
+evaluator_llm = ChatOpenAI(model="gpt-4-turbo", temperature=0, api_key=openai_api_key)
 
-# Setup chains
-generator_chain = LLMChain(llm=generator_llm, prompt=generator_prompt)
-evaluator_chain = LLMChain(llm=evaluator_llm, prompt=evaluator_prompt)
+# Setup chains using LCEL (LangChain Expression Language)
+output_parser = StrOutputParser()
+generator_chain = generator_prompt | generator_llm | output_parser
+evaluator_chain = evaluator_prompt | evaluator_llm | output_parser
 
 MAX_RETRIES = 3
 MIN_SCORE = 3
@@ -47,16 +48,18 @@ def generate_and_evaluate(property_data: PropertyData):
     failed_criteria_log = []
 
     while retries < MAX_RETRIES:
-        html_output = generator_chain.invoke({"property_json": property_data.model_dump_json()})["text"]
+        html_output = generator_chain.invoke({"property_json": property_data.model_dump_json()})
         logger.info("HTML Output: %s", html_output)
-        raw_output = evaluator_chain.invoke({"html_output": html_output})
-        evaluation_str = raw_output["text"]
+        
+        evaluation_str = evaluator_chain.invoke({"html_output": html_output})
         evaluation_str = re.sub(r"^```.*\n|```$", "", evaluation_str.strip(), flags=re.MULTILINE)
+        
         try:
             evaluation_json = json.loads(evaluation_str)
         except json.JSONDecodeError:
             logger.error("Invalid evaluator JSON: %s", evaluation_str)
             raise HTTPException(status_code=500, detail="Evaluator returned invalid JSON")
+        
         logger.info("Evaluation JSON: %s", evaluation_json)
 
         total_score = evaluation_json.get("total_score", 0)

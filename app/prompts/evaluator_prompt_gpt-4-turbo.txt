@@ -33,13 +33,13 @@ HTML OUTPUT:
 <p class="call-to-action">Don't miss this opportunity—schedule your visit today and make this Lisbon apartment your new home.</p>
 
 --- GOOD EXAMPLE OUTPUT ---
-{
+{{
   "structure_compliance": 5,
   "language_fluency_seo": 5,
   "multilingual_adaptability": 5,
   "total_score": 5,
   "missing_or_invalid_tags": []
-}
+}}
 
 --- BAD EXAMPLE INPUT ---
 <title>T3 Apartment Lisbon</title>
@@ -47,13 +47,13 @@ HTML OUTPUT:
 <h1>Apartment</h1>
 
 --- BAD EXAMPLE OUTPUT ---
-{
+{{
   "structure_compliance": 0,
   "language_fluency_seo": 2,
   "multilingual_adaptability": 3,
   "total_score": 1,
   "missing_or_invalid_tags": ["meta description too short", "h1 too generic", "missing key-features section"]
-}
+}}
 
 --- REQUIRED SECTIONS AND TAGS ---
 The HTML must include these elements:

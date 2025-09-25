@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Real Estate Listing Generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/public/favicon.png">
 
 </head>
 
@@ -65,9 +65,8 @@
             <div class="bg-white shadow rounded-2xl p-4">
                 <h2 class="font-semibold mb-2">Evaluation</h2>
                 <!-- Loading state -->
-                <div id="loading" class="hidden flex flex-col items-center justify-center py-6">
+                <div id="loading" class="hidden flex flex-col items-center justify-center py-6 min-h-[200px]">
                     <div role="status">
-
                         <div role="status">
                             <svg aria-hidden="true"
                                 class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
@@ -105,7 +104,7 @@
             errorEl.textContent = "";
             htmlRaw.value = "";
             loadingEl.classList.remove("hidden");
-
+            evaluationEl.innerHTML = "";
             try {
                 const payload = JSON.parse(jsonInput.value);
 
